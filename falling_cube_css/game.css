@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    /* display: flex; */
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+    position: relative;
+    background: yellowgreen;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+    background: rebeccapurple;
+    position: absolute;
+}
+
+.bar {
+    width: 150px;
+    height: 10px;
+    background: blue;
+    position: absolute;
+    margin: 480px 0 0 17px;
+    
+}
+
+/* button {
+    margin-top: 100px;
+} */
