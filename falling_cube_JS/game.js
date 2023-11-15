@@ -66,8 +66,14 @@ function frame() {
         cubePosition = randPosition + 'px'
         cube.style.left = cubePosition
         cubePosition2 = randPosition;
-        
-        if(score === 18){
+        if(score === 0){
+            clearInterval(id);
+            alert("Game over");
+            score = 10;
+            scoreElement.textContent = score;
+            id = setInterval(frame, speed);
+        }
+        else if(score === 18){
             alert("Level 2 !!!")
             clearInterval(id);
             speed -= 3;
