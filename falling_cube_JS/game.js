@@ -13,7 +13,12 @@ let barPosition2= 175;
 let cubePosition2 = 175;
 let speed = 5;
 
-let colors = ["red","yellow","green","orange","rebeccapurple"]
+let images = ["/falling_cube_images/fire.jpg",
+            "/falling_cube_images/balun.jpg",
+            "/falling_cube_images/bike.jpg",
+            "/falling_cube_images/car.jpg",
+            "/falling_cube_images/night.jpg"
+        ];
 
 
 
@@ -58,8 +63,10 @@ function frame() {
         }
          
         //random colors
-        let randColors = Math.floor(Math.random() * colors.length);
-        cube.style.background = colors[randColors]
+        let randImages = Math.floor(Math.random() * images.length);
+        let imgElement = cube.querySelector("img");
+        imgElement.src = images[randImages];
+        // cube.style.backgroundImage = `url('${colors[randColors]}')`
         
         //rand position
         let randPosition = Math.floor(Math.random() * 450)
