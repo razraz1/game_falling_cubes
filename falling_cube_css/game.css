@@ -15,6 +15,43 @@ body {
     color: white;
 }
 
+#timer{
+    background: rgb(202, 21, 21);
+    /* display: flex; */
+    padding: 1%;
+    justify-content: space-around;
+    /* align-items: center; */
+    position: absolute;
+    top:0;
+    left: 0;
+    margin-bottom: 1%;
+    /* z-index: 1; */
+}
+
+.side {
+    background: rgb(202, 21, 21);
+    /* display: flex; */
+    padding: 1%;
+    justify-content: space-around;
+    /* align-items: center; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-bottom: 1%;
+    /* z-index: 1; */
+}
+
+.side button{
+    width: 100%;
+    margin: 0;
+    
+}
+.side #add{
+    width: 50%;
+    text-align: center;
+    
+}
+
 h1 {
     text-align: center;
 }
@@ -62,5 +99,32 @@ button {
 }
 
 
+table{
+    border: 5px solid black;
+    margin: 20px;
+}
 
-
+table th {
+    border: 1px solid #000;
+    text-align: center;
+    background-color: rgb(193, 210, 212);
+    padding: 10px;
+    color: rgb(22, 146, 105);
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+  
+table td{
+    border: 1px solid gray;
+    padding: 10px;
+    white-space: wrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: white;
+    color: black; 
+  }
+  
+table tr:nth-child(odd){
+        background-color: rgb(101, 177, 105);
+    }
