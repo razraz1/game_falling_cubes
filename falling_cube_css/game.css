@@ -54,9 +54,12 @@ img{
     left:  175px; 
 }
 
-/* button {
+button {
     margin-top: 100px;
-} */
+    background:linear-gradient(blue,orange);
+    color: white;
+    padding: 20px;
+}
 
 
 

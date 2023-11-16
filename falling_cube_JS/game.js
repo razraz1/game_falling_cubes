@@ -81,13 +81,13 @@ function frame() {
             id = setInterval(frame, speed);
         }
         else if(score === 18){
-            alert("Level 2 !!!")
+            // alert("Level 2 !!!")
             clearInterval(id);
             speed -= 3;
             id = setInterval(frame, speed);
         }
         else if(score === 20){
-            alert("Level 3!!!")
+            // alert("Level 3!!!")
             clearInterval(id);
             speed -= 3;
             id = setInterval(frame, speed);
