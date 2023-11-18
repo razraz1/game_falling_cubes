@@ -73,7 +73,7 @@ function frame() {
         cubePosition = randPosition + 'px'
         cube.style.left = cubePosition
         cubePosition2 = randPosition;
-        if(score === 0){
+        if(score === 0 || counter === 0){
             clearInterval(id);
             alert("Game over");
             score = 10;
@@ -96,7 +96,7 @@ function frame() {
     } else {
             position++;
             cube.style.top = position + 'px';
-            cube.style.down = position + 'px';
+            // cube.style.down = position + 'px';
         }
     }
 }
@@ -121,39 +121,37 @@ function play(){
     timer = setInterval(function(){
         counter--;
         document.querySelector("#h2").innerHTML = counter;
-        if(counter === 0){
+        if(counter == 0){
             clearInterval(timer)
             alert("winnnnnnnn");
-            
+            counter= 60
+            play();
         }
     }, 1000)
 
 } 
 
 init();
+init();
 
 document.addEventListener('DOMContentLoaded', function () {
     // Retrieve data from localStorage
     const usersData = JSON.parse(localStorage.getItem('users')) || {};
 
-    // Reference to the table
     const table = document.getElementById('userTable');
 
-    // Loop through the user data and populate the table
     Object.values(usersData).forEach(user => {
-        const row = table.insertRow(-1); // Insert a row at the end of the table
+        const row = table.insertRow(-1); 
 
-        // Create and insert cells into the row
         const nameCell = row.insertCell(0);
         const emailCell = row.insertCell(1);
         const scoreCell = row.insertCell(2);
 
-        // Set cell values from user data
         nameCell.textContent = user.name;
         emailCell.textContent = user.email;
         scoreCell.textContent = scoreElement;
-        // You can modify this line to get the user's score if it exists in your data
-        scoreCell.textContent = ''; // User's score from local storage
+        
+        scoreCell.textContent = '';
     });
 });
 
